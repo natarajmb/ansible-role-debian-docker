@@ -1,0 +1,17 @@
+galaxy_info:
+  author: Nataraj Basappa (nataraj.basappa@yahoo.com)
+  description: Ansible role to install docker
+  company: Cognitivenode Limited
+
+  license: license MIT / BSD
+
+  min_ansible_version: 2.x
+
+  platforms:
+  - name: Debian
+    versions:
+    - 9.x
+  
+  galaxy_tags: 
+  - development
+  - docker

@@ -1,0 +1,9 @@
+---
+# tasks file for debian-docker
+- import_tasks: dependency.yml
+- import_tasks: add-apt-key.yml
+- import_tasks: add-repository.yml
+- import_tasks: install.yml
+- include_tasks: move-docker-home.yml
+  when: change_docker_home == true
+- import_tasks: add-user-group.yml

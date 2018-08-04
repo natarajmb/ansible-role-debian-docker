@@ -1,0 +1,7 @@
+---
+- name: Add an docker apt key by id from a keyserver
+  become: true
+  apt_key:
+    id: 0EBFCD88
+    url: https://download.docker.com/linux/debian/gpg
+    state: present

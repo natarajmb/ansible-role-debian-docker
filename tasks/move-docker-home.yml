@@ -1,0 +1,14 @@
+---
+  - name: Create docker home directory
+    become: true
+    file:
+      path: "{{new_docker_home}}"
+      state: directory
+
+  - name: Reconfiguring docker home
+    become: true
+    template:
+      src: daemon.json
+      dest: /etc/docker/daemon.json
+    notify:
+    - "changed docker settings"

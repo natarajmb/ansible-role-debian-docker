@@ -1,0 +1,12 @@
+---
+- name: Install dependecy packages for docker
+  become: true
+  apt:
+    name: "{{ packages }}"
+  vars:
+    packages:
+    - apt-transport-https
+    - ca-certificates
+    - curl
+    - gnupg2
+    - software-properties-common

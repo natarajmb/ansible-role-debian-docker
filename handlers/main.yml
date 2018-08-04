@@ -1,0 +1,17 @@
+---
+# handlers file for debian-docker
+- name: restart docker
+  service:
+    name: docker
+    state: restart
+
+- name: start docker
+  service:
+    name: docker
+    state: start
+  listen: "changed docker settings"  
+
+- name: stop docker
+  service:
+    name: docker
+    state: stop      

@@ -1,0 +1,4 @@
+---
+# vars file for debian-docker
+change_docker_home: true
+new_docker_home: /home/docker

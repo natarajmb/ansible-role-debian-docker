@@ -1,0 +1,8 @@
+---
+- name: Install docker
+  become: true
+  apt:
+    name: docker-ce
+    update_cache: yes
+  notify:
+    - restart docker
